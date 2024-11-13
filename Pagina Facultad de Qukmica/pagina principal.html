@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #d4edda;
+        }
+        .sidebar {
+            width: 10%;
+            background-color: #d4edda;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            height: 100vh;
+            border-right: 5px solid #000000;
+        }
+        .content {
+            width: 90%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #d4edda;
+        }
+        .subtitle {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1em;
+            height: 20px;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 85vh; /* Ampliado para ocupar más espacio en la pantalla */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menú</h2>
+        <div class="subtitle">Bitacora</div>
+        <div class="subtitle">FMT-0089</div>
+    </div>
+
+    <div class="content">
+        <!-- Sección de Agenda con el iframe de Google Sheets -->
+        <div id="agenda">
+            <iframe src="https://docs.google.com/spreadsheets/d/1BEr1UXbdGLI0-2Kjd6uZW_CbeTEy_PbNQ1iVwp9y6Fs/edit?usp=sharing" title="Agenda"></iframe>
+        </div>
+
+        <!-- Sección de Venta (puedes agregar contenido más adelante) -->
+        <div id="venta">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Privada</title>
+    <style>
+        /* Estilos generales */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #d4edda;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header-image {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+        .password-input {
+            padding: 10px;
+            width: 80%;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            padding: 10px 20px;
+            margin-top: 10px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="C:/Users/rokoa/Downloads/Pagina Facultad de Qukmica/Logo-UAEM.png" alt="Logo" class="header-image">
+        <h2>Facultad de Química UAEMéx</h2>
+        <input type="password" id="password" class="password-input" placeholder="Contraseña">
+        <button onclick="checkPassword()" class="submit-btn">Entrar</button>
+        <p id="error-message" class="error-message">Contraseña incorrecta</p>
+    </div>
+
+    <script>
+        const correctPassword = "tuContraseña";
+
+        function checkPassword() {
+            const passwordInput = document.getElementById('password').value;
+            if (passwordInput === correctPassword) {
+                localStorage.setItem("isAuthenticated", "true");
+                alert("Contraseña correcta. Bienvenido!");
+                window.location.href = "file:///C:/Users/rokoa/Downloads/Pagina%20Facultad%20de%20Qukmica/pagina%20principal.html";
+            } else {
+                document.getElementById('error-message').style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
